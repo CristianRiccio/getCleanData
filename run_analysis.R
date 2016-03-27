@@ -94,5 +94,6 @@ setSummary <- summarize_each(setSubjectActivity, funs(mean))
 head(setSummary)
 str(setSummary)
 
-# Export this dataset in a CSV file
-write.csv(setSummary, "summaryDataSet.csv")
+# Export this dataset in a text file
+# Open the file in a spreadsheet with space as a field separator
+write.table(setSummary, "summaryDataSet.text", row.names = FALSE)
